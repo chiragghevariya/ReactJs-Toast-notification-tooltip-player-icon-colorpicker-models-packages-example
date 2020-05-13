@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter as Router} from "react-router-dom";
+import RouteAll  from "./Route";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+const CallRoute = RouteAll();
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+
+    <Router>
+      <App /> 
+      {CallRoute}
+    </Router>
+  ,
   document.getElementById('root')
 );
 
